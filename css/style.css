@@ -430,7 +430,7 @@ font-size: 1em;
     text-align: right;
     margin-left: 2em;
 }
-btncarrito:hover {
+.btncarrito:hover {
 background-color: aqua;
 }
 @media screen and (max-width:1024px){
