@@ -16,6 +16,7 @@ button{
     font-family: 'Helvetica', FontAwesome, sans-serif;
 }
 .headercontainer{
+    width: auto;
     background-color: #F6762C;
     height: 7.2vh;
     display: flex;
@@ -172,6 +173,8 @@ button{
     margin: 2vh 2vw;
 }
 .productocontainer{
+display: flex;
+flex-direction: column;
 padding: .5vh .5vw;
 }
 .imgproductologocontainer{
@@ -222,20 +225,12 @@ padding: .5vh .5vw;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.agotado{
-    
-}
-.cantidad{
-
-}
 .htxt{
 cursor: pointer;
 }
 .precio{
-    padding: 0px 1em;
     background-color: #F6762C;
     font-size: 25px;
-    border-radius: 60px;
     transition-duration: 0.4s;
 }
 .descripcion{
@@ -384,10 +379,9 @@ a:hover{
     text-align: center;
 }
 .maincont {
-    height: 30vw;
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 80vw;
     margin: auto;
     margin-top: 9vh;
     margin-bottom: 10vh;
@@ -396,42 +390,62 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-.layoutcarrito {
-    display: flex;
-    flex-direction: column;
-    width: 98%;
-    height: 88%;
-
-}
 .items {
-    display: inline-block;
-    margin-bottom: 1em;
-    border-radius: 10px;
-    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    background-color: #cbdfb7;
-
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 .imgitem {
-float: left;
+    display:flex;
+    width: 150px;
+    height: 150px;
+}
+.nombreCarrito, .precioCarrito{
+    color:white;
+    width: 25%;
+    font-size: 30px;
+}
+.delicon{
+    font-size: 30px;
+    cursor: pointer;
+}
+.delicon:hover{
+    color: #F6762C;
 }
 .btncarrito {
-margin-top: 1em;
-padding: 15px 15px;
-width: 90%;
-border: none;
-outline: none;
-border-radius: 5px;
-font-size: 1em;
+    background-color: #5a735a;
+    margin-top: 1em;
+    padding: 15px 15px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
 }
 .totalcarrito {
     width: 85%;
-    font-size: 1.5em;
-    text-align: right;
-    margin-left: 2em;
-}
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
+
+}    
 .btncarrito:hover {
-background-color: aqua;
+    background-color: #2d3d4c;
+    color: white;
+}
+.deleteicon {
+   font-size: 40px;;
+}
+.invisible{
+    visibility: hidden;
 }
 @media screen and (max-width:1024px){
     .infomaincontainer{
@@ -478,9 +492,10 @@ background-color: aqua;
     .cont{
     position: inherit;
     }
-    .maincontainer{
+    .maincontainer, .maincont{
         width: 100%;
     }
+
 }
 @media screen and (max-width: 768px){
     .bannercontainer{
@@ -505,6 +520,17 @@ background-color: aqua;
     .login{
         width: auto;
     }
+    .maincont{
+        width: auto;
+        height: auto;
+    }
+    .totalcarrito {
+       width: auto;
+    }
+    .precioCarrito, .nombreCarrito{
+        font-size: 22px;
+    }
+
 }
 @media screen and (max-width: 640px){
     header{
@@ -536,5 +562,14 @@ background-color: aqua;
     }
     .login{
         margin: auto;
+    }
+    .items{
+        flex-direction: column;
+    }
+    .nombreCarrito, .precioCarrito{
+        width: auto;
+    }
+    .delicon{
+        margin: .5em;
     }
 }
